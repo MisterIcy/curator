@@ -25,7 +25,7 @@ jobs:
           clang-format --verbose -i --style=file $(find ./src | grep -E ".*(\.c|\.h)$")
       - name: "Check Changes"
         run: |
-          if [[ git diff --name-only | wc -l == 0 ]]
+          if [[ $(git diff --name-only | wc -l) == 0 ]]
           then
           exit 0;
           fi
