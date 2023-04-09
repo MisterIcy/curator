@@ -6,26 +6,21 @@
 struct CuratorProject;
 struct CuratorProjectMeta;
 
-struct CuratorProject* Project__create(
-        const char* title,
-        const char* location);
+struct CuratorProject *Project__create(const char *title, const char *location);
 
-struct CuratorProject* Project__open(
-        const char* location
-        );
+struct CuratorProject *Project__open(const char *location);
 
-void Project__close(struct CuratorProject* self);
-
+void Project__close(struct CuratorProject *self);
 
 struct CuratorProject {
-    int version;
-    char* title;
-    struct CuratorDatabase* db;
-    struct CuratorProjectMeta* meta;
+  int version;
+  char *title;
+  struct CuratorDatabase *db;
+  struct CuratorProjectMeta *meta;
 };
 
 struct CuratorProjectMeta {
-    char* author;
+  char *author;
 };
 
 #endif
