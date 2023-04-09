@@ -14,7 +14,7 @@ struct CuratorDatabase;
  * @param fileName the name of the file
  * @return A pointer to the newly opened database.
  */
-struct CuratorDatabase *Database__create(const char* fileName);
+struct CuratorDatabase *Database__create(const char *fileName);
 
 /**
  * @brief Opens a database.
@@ -66,7 +66,7 @@ void Database__finalizeStatement(struct CuratorDatabase *self,
                                  sqlite3_stmt *statement);
 
 int Database__executeStatement(struct CuratorDatabase *self,
-                               sqlite3_stmt* statement);
+                               sqlite3_stmt *statement);
 
 /**
  * @brief Database Structure
